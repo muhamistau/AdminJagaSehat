@@ -21,7 +21,7 @@ public class People {
 
     public String getEmail() {
         if (email.length() < 2) {
-            email = "null";
+            email = "-";
         }
         return email;
     }

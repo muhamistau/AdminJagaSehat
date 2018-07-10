@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".AdminActivity">
 
     <ScrollView
@@ -26,8 +27,7 @@
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/pieChartPekerjaan"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_below="@id/pieChartJk">
+                android:layout_height="300dp">
 
             </com.github.mikephil.charting.charts.PieChart>
 
@@ -35,7 +35,6 @@
                 android:id="@+id/pieChartPendidikan"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:layout_below="@id/pieChartPekerjaan"
                 android:layout_marginBottom="50dp">
 
             </com.github.mikephil.charting.charts.PieChart>
@@ -48,6 +47,9 @@
         android:id="@+id/data_individu"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:selectableItemBackground"
         android:layout_alignParentBottom="true"
         app:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="@dimen/cardview_default_radius">

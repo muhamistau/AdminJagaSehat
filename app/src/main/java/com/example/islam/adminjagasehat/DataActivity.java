@@ -18,9 +18,17 @@ public class DataActivity extends AppCompatActivity {
 
 
     @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return super.onSupportNavigateUp();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         listView = (ListView) findViewById(R.id.list_view);
         Query query = FirebaseDatabase.getInstance().getReferenceFromUrl("https://jagasehat-fd156.firebaseio.com/users");

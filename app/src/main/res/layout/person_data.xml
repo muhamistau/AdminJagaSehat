@@ -8,55 +8,208 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="@dimen/cardview_default_radius"
         app:cardElevation="@dimen/cardview_default_elevation">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:padding="8dp">
 
             <TextView
                 android:id="@+id/number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1" />
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:text="Data ke-" />
 
-            <TextView
-                android:id="@+id/email_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="email" />
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/number"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp">
 
-            <TextView
-                android:id="@+id/jk_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="jk" />
+                <ImageView
+                    android:id="@+id/email_image"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_email_pink_36dp" />
 
-            <TextView
-                android:id="@+id/pekerjaan_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="pekerjaan" />
+                <LinearLayout
+                    android:id="@+id/email_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/pendidikan_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="pendidikan" />
+                    <TextView
+                        android:id="@+id/emailTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textColor="@color/colorPrimary" />
 
-            <TextView
-                android:id="@+id/umur_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="umur" />
+                    <TextView
+                        android:id="@+id/email_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="email" />
 
-        </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/linear1"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/pekerjaan_image"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_business_center_pink_24dp" />
+
+                <LinearLayout
+                    android:id="@+id/pekerjaan_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pekerjaanTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pekerjaan"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/pekerjaan_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="pekerjaan" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/pendidikan_image"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_school_pink_36dp" />
+
+                <LinearLayout
+                    android:id="@+id/pendidikan_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pendidikanTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendidikan"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/pendidikan_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="pendidikan" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/linear2"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/jk_image"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_wc_pink_36dp" />
+
+                <LinearLayout
+                    android:id="@+id/gender_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/jkTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jenis Kelamin"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/jk_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="jk" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/umur_image"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_person_pink_24dp" />
+
+                <LinearLayout
+                    android:id="@+id/umur_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/umurTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Umur"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/umur_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="umur" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
-
 
 </LinearLayout>
